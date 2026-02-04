@@ -20,7 +20,7 @@ return Application::configure(basePath: dirname(__DIR__))
 
             if ($request->expectsJson()) {
                 return response()->json([
-                    'message' => 'HALA KA SERVER ERROR YARN! bawal mag uncle',
+                    'message' => 'HALA KA! SERVER ERROR YARN! bawal mag uncle',
                 ], 500);
             }
 
