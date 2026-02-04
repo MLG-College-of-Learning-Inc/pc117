@@ -19,7 +19,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $exceptions->render(function (\Throwable $e, $request) {
             if ($request->expectsJson()) {
                 return response()->json([
-                    'message' => 'SERVER ERROR!',
+                    'message' => 'HALA KA! SERVER ERROR YARN! BAWAL MAG UNCLE GPT!',
                     'code'    => 500
                 ], 500);
             }
