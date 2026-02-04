@@ -20,7 +20,7 @@ return Application::configure(basePath: dirname(__DIR__))
 
             if ($request->expectsJson()) {
                 return response()->json([
-                    'message' => 'HAHAHAH ERROR.',
+                    'message' => 'SERVER ERROR!',
                 ], 500);
             }
 
