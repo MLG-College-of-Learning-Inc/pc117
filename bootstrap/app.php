@@ -15,5 +15,15 @@ return Application::configure(basePath: dirname(__DIR__))
         //
     })
     ->withExceptions(function (Exceptions $exceptions): void {
-        //
+
+        $exceptions->render(function (\Throwable $e, $request) {
+
+            if ($request->expectsJson()) {
+                return response()->json([
+                    'message' => 'HAHAHAH ERROR.',
+                ], 500);
+            }
+
+        });
+
     })->create();
